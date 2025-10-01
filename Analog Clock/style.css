@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+  height: 100vh;
+  background: #1e1e1e;
+  margin: 0;
+  color: #fff;
+}
+
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.number {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 0px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  top: 50%;
+  left: 43.5%;
+  transform-origin: center center;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  transition: transform 0.05s linear;
+}
+
+.hour {
+  width: 8px;
+  height: 70px;
+  background: #fff;
+}
+
+.minute {
+  width: 5px;
+  height: 100px;
+  background: #0ff;
+}
+
+.second {
+  width: 2px;
+  height: 120px;
+  background: #f00;
+}
+
+.center {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

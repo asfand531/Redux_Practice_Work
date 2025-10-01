@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Count-down Timer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="toast">
+        <p>Event ended</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="20px"
+          viewBox="0 -960 960 960"
+          width="20px"
+          fill="whitesmoke"
+          id="close_errormsg_icon"
+        >
+          <path
+            class="close_errormsg_icon"
+            d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"
+          />
+        </svg>
+      </div>
+      <h1 id="timerDisplay" title="Heading">No event ahead</h1>
+      <label for="start_date" title="Starting date">Starting date</label>
+      <input
+        type="datetime-local"
+        name="strt_date"
+        id="start_date"
+        title="Starting date"
+      />
+      <label for="end_date" title="Ending date">Ending date</label>
+      <input
+        type="datetime-local"
+        name="end_date"
+        id="end_date"
+        title="Ending date"
+      />
+      <button id="start_event_btn" title="Start event">Start Event</button>
+    </div>
+    <audio
+      src="mixkit-facility-alarm-sound-999.wav"
+      preload="auto"
+      id="endMusic"
+    ></audio>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Progress Bar with requestAnimationFrame</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 3000px; /* make the page scrollable */
+    }
+
+    /* Progress bar container */
+    #progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: #eee;
+      z-index: 1000;
+    }
+
+    /* Progress bar */
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      transition: width 0.1s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress bar UI -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <script>
+    // Throttle function using requestAnimationFrame
+    function throttleWithRAF(func) {
+      let isRunning = false;
+
+      return function (...args) {
+        if (isRunning) return;
+
+        isRunning = true;
+        requestAnimationFrame(() => {
+          func.apply(this, args);
+          isRunning = false;
+        });
+      };
+    }
+
+    const progressBar = document.getElementById("progress-bar");
+
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      progressBar.style.width = progress + "%";
+    }
+
+    // Attach throttled scroll handler
+    window.addEventListener("scroll", throttleWithRAF(updateProgress));
+  </script>
+</body>
+</html>

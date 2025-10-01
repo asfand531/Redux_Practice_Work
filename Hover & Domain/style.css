@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg");
+  color: white;
+  background-size: cover;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  background-image: linear-gradient(to right, #8d8b8b, #f3f3f3);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.heading:hover {
+  background-image: linear-gradient(to left, #8d8b8b, #f3f3f3);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: 1s all ease-in-out;
+}
+
+.form-container {
+  background: rgba(131, 131, 131, 0.5);
+  height: 50%;
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  margin: 30px 0 10px;
+}
+
+#error-message {
+  color: red;
+  font-size: x-small;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+input:hover {
+  border: 1px solid black;
+}
+
+button {
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+  margin: 5px 15px;
+  color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .form-container {
+    background: rgba(131, 131, 131, 0.5);
+    height: 50%;
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;
+    margin: 30px 0 10px;
+  }
+  input {
+    padding: 10px;
+    margin: 10px;
+    width: 12rem;
+    border-radius: 10px;
+  }
+
+  button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin: 0 5px;
+    color: rgb(0, 0, 0);
+  }
+}

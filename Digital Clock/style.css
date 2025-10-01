@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: bisque;
+}
+
+#digialClock {
+  height: 200px;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 50px;
+  background: rgba(223, 223, 223, 0.466);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: xx-large;
+}

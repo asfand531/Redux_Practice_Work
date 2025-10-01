@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+    <title>Pagination</title>
+  </head>
+  <body>
+    <div id="errorMsg">
+      <p>
+        Please enter a number between 1 to&nbsp;<span
+          id="totalPagesNumber"
+        ></span>
+      </p>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="20px"
+        viewBox="0 -960 960 960"
+        width="20px"
+        fill="whitesmoke"
+        id="close_errormsg_icon"
+      >
+        <path
+          d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"
+        />
+      </svg>
+    </div>
+    <div class="container">
+      <section class="header-section">
+        <h1 class="tableHeading">API Data</h1>
+        <p id="totalItem">
+          Total Items Count: <span id="totalItemNumber"></span>
+        </p>
+      </section>
+      <div id="content">
+        <table>
+          <thead class="tableHeader">
+            <tr class="tableHeader">
+              <th class="tableIdHeader">ID</th>
+              <th class="tableNameHeader">Name</th>
+              <th class="tableEmailHeader">Email</th>
+              <th class="tableCommentHeader">Comment</th>
+              <th class="tableActionsHeader">Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="btnContainer">
+        <button id="firstBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="20px"
+            viewBox="0 -960 960 960"
+            width="20px"
+            fill="whitesmoke"
+          >
+            <path
+              d="M288-288v-384h72v384h-72Zm384 0L480-480l192-192 51 51-141 141 141 141-51 51Z"
+            />
+          </svg>
+          First
+        </button>
+        <button id="prevBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="20px"
+            viewBox="0 -960 960 960"
+            width="20px"
+            fill="whitesmoke"
+          >
+            <path d="M576-240 336-480l240-240 51 51-189 189 189 189-51 51Z" />
+          </svg>
+          Prev
+        </button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">
+          Next
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="20px"
+            viewBox="0 -960 960 960"
+            width="20px"
+            fill="whitesmoke"
+          >
+            <path d="M522-480 333-669l51-51 240 240-240 240-51-51 189-189Z" />
+          </svg>
+        </button>
+        <button id="lastBtn">
+          Last
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="20px"
+            viewBox="0 -960 960 960"
+            width="20px"
+            fill="whitesmoke"
+          >
+            <path
+              d="m336-288-51-51 141-141-141-141 51-51 192 192-192 192Zm312 0v-384h72v384h-72Z"
+            />
+          </svg>
+        </button>
+        <span>
+          <input
+            type="number"
+            placeholder="Go to page number"
+            id="goToInput"
+            inputmode="numeric"
+          />
+          <button id="goToBtn">Go</button>
+          <select name="showItemsPerPage" id="showItemsPerPage"></select>
+        </span>
+      </div>
+    </div>
+    <div id="modal-container">
+      <form class="modal">
+        <section id="close-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="black"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </section>
+        <h2 class="heading">Update Data</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name" class="input" />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email"
+          class="input"
+        />
+        <label for="body">Comment</label>
+        <textarea
+          name="body"
+          id="body"
+          cols="30"
+          rows="10"
+          placeholder="Enter comments"
+          class="input"
+        ></textarea>
+        <button type="submit" class="updateBtn">Update</button>
+      </form>
+    </div>
+  </body>
+</html>

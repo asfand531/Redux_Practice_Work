@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: rgb(165, 165, 165);
+        position: relative;
+        gap: 50px;
+      }
+      #board {
+        cursor: cell;
+        border-radius: 5px;
+        background-color: white;
+      }
+
+      .insertColors {
+        position: relative;
+        gap: 10px;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <canvas
+      id="board"
+      width="500"
+      height="400"
+      style="border: 1px solid"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("board");
+      const ctx = canvas.getContext("2d");
+      let drawing = false;
+
+      canvas.addEventListener("mousedown", () => (drawing = true));
+      canvas.addEventListener("mouseup", () => (drawing = false));
+      canvas.addEventListener("mousemove", draw);
+
+      const colors = ["black", "blue", "red", "yellow", "orange"];
+      function draw(e) {
+        if (!drawing) return;
+        ctx.beginPath();
+        ctx.arc(e.offsetX, e.offsetY, 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      let container = document.getElementById("container");
+
+      colors.map((color) => {
+        let colorPicker = document.createElement("div");
+        colorPicker.classList.add("insertColors");
+        let colorStyle = document.getElementsByClassName("insertColors");
+        colorPicker.style.cursor = "pointer";
+        colorPicker.style.background = color;
+        colorPicker.style.height = "25px";
+        colorPicker.style.width = "25px";
+        container.append(colorPicker);
+
+        colorPicker.addEventListener("click", () => {
+          ctx.fillStyle = color;
+        });
+
+        console.log(colorPicker);
+      });
+    </script>
+  </body>
+</html>

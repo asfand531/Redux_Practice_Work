@@ -1,0 +1,532 @@
+/* html {
+  scroll-behavior: smooth;
+} */
+
+:root {
+  --primary-color: #5a5a5a;
+  --primary-color-hover: #6e6e6e;
+  --modal-color: gray !important;
+  --table-background-color: rgb(134, 134, 134);
+}
+
+/* Navbar Styles */
+.nav-container {
+  padding: 10px 20px;
+  background-color: rgb(180, 180, 179);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo > img {
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(199, 199, 199);
+  display: flex;
+}
+
+.nav-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.nav-ul > li {
+  margin: 0;
+}
+
+/* Hide menu icon on desktop */
+.menu-icon-wrapper {
+  display: none;
+}
+
+/* .nav-container .nav-btn {
+  background-color: #8b8b8b;
+  color: white;
+} */
+
+.nav-btn {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
+
+.ant-btn:hover {
+  background-color: var(--primary-color-hover) !important;
+}
+
+/* General Layout Adjustments */
+.form-inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: var(--modal-color);
+}
+
+.form-inputs:hover {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: var(--modal-color);
+}
+
+.form-inputs:active {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: var(--modal-color);
+}
+.form-inputs:focus {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: var(--modal-color);
+}
+
+.parent {
+  padding: 50px 0 0;
+  box-sizing: border-box;
+}
+
+/* Home Page */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url(https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg)
+    no-repeat center center;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+}
+
+.home-text-container {
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(155, 159, 212, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px 60px;
+}
+
+/* Add User */
+.add-user-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(255, 246, 235);
+}
+
+.add-user-modal .ant-modal-content {
+  background-color: rgb(134, 134, 134);
+  color: white;
+}
+
+.add-user-modal .ant-form-item-label > label {
+  color: white;
+}
+
+.add-user-modal .ant-modal-title {
+  color: white;
+  background-color: rgb(134, 134, 134);
+  text-align: center;
+}
+
+.form-inputs:active {
+  color: white;
+}
+
+.add-user-modal input:-webkit-autofill,
+.add-user-modal input:-webkit-autofill:hover,
+.add-user-modal input:-webkit-autofill:focus,
+.add-user-modal input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px gray inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.add-user-modal .ant-input-status-error {
+  background-color: rgba(200, 210, 230, 0.192) !important;
+}
+
+.ant-input-number {
+  background-color: rgba(200, 210, 230, 0.192) !important;
+}
+
+.ant-picker {
+  background-color: rgba(200, 210, 230, 0.192) !important;
+}
+
+.ant-input-affix-wrapper > input.ant-input {
+  color: white !important;
+}
+
+.user-form {
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(155, 159, 212, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px 60px;
+}
+
+/* User List */
+.user-list-container {
+  min-height: calc(100vh - 52px);
+  background-color: rgb(200, 200, 200);
+  padding: 10px 50px 30px;
+  color: white;
+  overflow: hidden;
+}
+
+/* User Products */
+.user-products-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-products-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-x: hidden;
+}
+
+.heading {
+  text-align: center;
+}
+
+.user-products-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: rgb(200, 200, 200);
+  min-height: 100vh;
+  padding: 20px 50px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Add Product */
+.add-product-container {
+  background-color: rgb(255, 246, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cards */
+.user-product-card {
+  margin: 0 5px;
+}
+
+/* Cart */
+.cart-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon-btn {
+  border-radius: 50%;
+  height: 50px;
+}
+
+/* Cart Details */
+.cart-details-container {
+  min-height: calc(100vh - 52px);
+  padding: 50px;
+  background-color: rgb(200, 200, 200);
+  color: white;
+}
+
+.total-cart {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.scrollable {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.no-data-heading {
+  text-align: center;
+  line-height: 90vh;
+}
+
+.cart-table .ant-table-cell {
+  background-color: var(--table-background-color) !important;
+  color: white !important;
+}
+
+/* Add Product Form */
+.add-product-form {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(155, 160, 210, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Common page section heights */
+.home-container,
+.add-user-container,
+.user-products-container,
+.add-product-container,
+.cart-details-container {
+  height: calc(100vh - 52px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Pagination */
+.pagination-section {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+/* Input inside InputNumber */
+.ant-input-number .ant-input-number-input {
+  background-color: gray !important;
+  color: white !important;
+  caret-color: white;
+}
+
+.ant-input-number .ant-input-picker-input {
+  background-color: gray !important;
+  color: white !important;
+  caret-color: white;
+}
+
+/* InputNumber box (including up/down buttons) */
+.ant-input-number {
+  background-color: gray !important;
+  border: 1px solid #ccc;
+  color: white !important;
+}
+
+/* Outer wrapper of the DatePicker */
+.ant-picker {
+  background-color: gray !important;
+  color: white !important;
+  border: 1px solid #ccc;
+}
+
+/* The input inside DatePicker */
+.ant-picker input {
+  background-color: gray !important;
+  color: white !important;
+  caret-color: white;
+}
+
+/* Popup calendar panel */
+.ant-picker-panel {
+  background-color: #4f4f4f !important;
+  color: white;
+}
+
+/* Calendar cell text */
+.ant-picker-cell-inner {
+  color: white;
+}
+
+/* Hover and selected states */
+.ant-picker-cell-inner:hover,
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  background-color: #6e6e6e !important;
+}
+
+@media screen and (max-width: 800px) {
+  /* Navbar Styles */
+  .nav-container {
+    padding: 11px 20px;
+    background-color: rgb(180, 180, 179);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .mobile-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo > img {
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(199, 199, 199);
+    display: flex;
+  }
+
+  .menu-icon-wrapper > .menu-icon {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .menu-icon-wrapper > .menu-icon:active {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    rotate: 360deg;
+    transition: 900ms rotate ease-in-out;
+  }
+
+  .menu-icon-wrapper > .close-icon {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .menu-icon-wrapper > .close-icon:active {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    rotate: -360deg;
+    transition: 700ms rotate ease-in-out;
+  }
+
+  .nav-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: all 0.8s ease-in-out;
+  }
+
+  .nav-ul.open {
+    opacity: 1;
+    max-height: 300px;
+    transform: translateY(0);
+    margin-top: 10px;
+  }
+
+  .nav-ul > li {
+    margin: 0;
+  }
+
+  .nav-btn {
+    width: 100%;
+    height: 2em;
+    font-size: 12px;
+  }
+
+  .cart-icon-btn {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+
+  .cart-icon {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+
+  .welcome-cart-heading {
+    font-size: 1.5rem;
+  }
+
+  .cart-details-heading {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .back-to-shop-btn {
+    width: max-content;
+  }
+
+  .total-cart {
+    font-size: 1rem;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-text-container {
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(155, 159, 212, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px 30px;
+    font-size: 0.7rem;
+    transition: all 1s ease-in-out;
+  }
+}

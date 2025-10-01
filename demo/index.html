@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+
+    <style>
+      body {
+        cursor: default;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <button>Submit</button>
+      <p>This is demo paragraph</p>
+      <h1 id="display"></h1>
+    </div>
+
+    <script>
+      const display = document.getElementById("display");
+      display.style.bac;
+      document.getElementById("container").addEventListener("click", (e) => {
+        if (e.target.tagName === "BUTTON") {
+          let tagName = e.target.tagName;
+          let tag = e.target;
+          tag.style.color = "white";
+          tag.style.backgroundColor = "black";
+          display.style.backgroundColor = "black";
+          display.style.color = "white";
+          display.innerHTML = `You click ${tagName.toLowerCase()}.`;
+        } else if (e.target.tagName === "P") {
+          let tagName = e.target.tagName;
+          let tag = e.target;
+          tag.style.color = "black";
+          tag.style.backgroundColor = "white";
+          display.style.backgroundColor = "white";
+          display.style.color = "black";
+          display.innerHTML = `You click ${tagName.toLowerCase()}.`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Asimovian&family=Caveat+Brush&family=Michroma&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default Theme */
+:root {
+  --primary-text-color: white;
+  --secondary-text-color: black;
+  --fill-color: rgba(13, 70, 175, 0.7);
+  --font-family: "Orbitron", sans-serif;
+  --background: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0");
+  --height: 100vh;
+  --display: flex;
+  --justify-content: center;
+  --align-items: center;
+  --background-repeat: no-repeat;
+  --background-size: cover;
+  --transition: background 1s ease-in-out, color 1s ease-in-out;
+
+  /* Main container */
+  --main-container-border-radius: 24px;
+  --main-container-background: rgba(255, 255, 255, 0.2);
+  --main-container-z-index: -1;
+  --main-container-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --main-container-backdrop-filter: blur(5px);
+  --main-container-border: 1px solid rgba(255, 255, 255, 0.3);
+  --main-container-text-align: center;
+  --main-container-height: 300px;
+  --main-container-width: 60%;
+  --main-container-flex-direction: column;
+  --main-container-bottom: auto;
+  --main-container-left: auto;
+
+  /* Video */
+  --background-video-display: none;
+
+  /* Button */
+  --cursor-pointer: pointer;
+  --background-transparent: transparent;
+  --button-border-none: none;
+  --button-border-radius: 50%;
+  --button-font-size: 24px;
+
+  /* Stopwatch */
+  --stop-watch-display-width: 100%;
+  --stop-watch-font-size: xxx-large;
+
+  /* Buttons container */
+  --btn-container-flex-direction: row;
+  --btn-container-gap: 10px;
+
+  /* Select */
+  --select-position: absolute;
+  --select-top: 20px;
+  --select-left: auto;
+  --select-right: auto;
+  --select-font-size: medium;
+  --select-font-weight: 500;
+  --select-width: 110px;
+  --select-border: 1px solid white;
+  --select-border-radius: 20px;
+  --select-box-shadow: 5px 10px 35px 5px;
+  --select-padding: 10px;
+  --select-appearance: none;
+  --select-arrow: url("drop-down-icon.svg");
+  --select-background-repeat: no-repeat;
+  --select-background-position: right 3px center;
+  --select-background-size: 25px;
+  --select-z-index: auto;
+  --select-color-transparent: unset;
+  --select-background-blue-greenish: transparent;
+
+  /* Gradient text defaults */
+  --text-color: unset;
+}
+
+/* Theme 1 */
+:root[data-theme="theme1"] {
+  --font-family: "Asimovian", sans-serif;
+  --background: url("https://images.unsplash.com/photo-1542827634-7aa7281fb965?q=80&w=1170&auto=format&fit=crop");
+  --main-container-background: linear-gradient(
+    to right top,
+    rgba(56, 136, 112, 0.3),
+    rgba(108, 235, 176, 0.5)
+  );
+  --main-container-height: 400px;
+  --main-container-width: 50%;
+  --main-container-bottom: 5%;
+  --main-container-left: 8%;
+  --select-right: 20px;
+  --select-width: 100px;
+}
+
+/* Theme 2 */
+:root[data-theme="theme2"] {
+  --font-family: "Poppins", sans-serif;
+  --background: url("https://images.unsplash.com/photo-1543187018-21e461e7538e?q=80&w=1074&auto=format&fit=crop");
+  --main-container-border-radius: 0px;
+  --main-container-background: linear-gradient(
+    to right top,
+    rgba(56, 136, 112, 0.3),
+    rgba(108, 235, 176, 0.5)
+  );
+  --main-container-height: 100vh;
+  --main-container-width: 100%;
+  --select-left: 20px;
+  --select-width: 100px;
+  --select-z-index: 1;
+  --heading-position: absolute;
+  --heading-top: 30%;
+  --heading-size: xxx-large;
+}
+
+/* Theme 3 */
+:root[data-theme="theme3"] {
+  --font-family: "Michroma", sans-serif;
+  --background: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg");
+  --main-container-height: 300px;
+  --main-container-width: 60%;
+  --select-top: 90vh;
+  --select-left: 20px;
+  --select-border: none;
+  --text-color: linear-gradient(to right top, rgb(228, 227, 231), #727272);
+}
+
+/* Theme 4 */
+:root[data-theme="theme4"] {
+  --font-family: "Caveat Brush", cursive;
+  --background: none;
+  --main-container-height: 300px;
+  --main-container-width: 60%;
+  --select-top: 90%;
+  --select-right: 20px;
+  --select-width: 70px;
+  --select-border: none;
+  --select-box-shadow: none;
+  --text-color: linear-gradient(to right top, rgb(13, 70, 175), #727272);
+  --fill-color: rgba(13, 70, 175, 0.7);
+  --background-video-display: block;
+  --background-video-position: fixed;
+  --background-video-width: 100vw;
+  --background-video-height: 100vh;
+  --background-object-fit: cover;
+  --primary-text-color: linear-gradient(
+    to right top,
+    rgb(13, 70, 175),
+    #727272
+  );
+}
+
+body {
+  display: var(--display);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  height: var(--height);
+  font-family: var(--font-family);
+  background: var(--background);
+  background-repeat: var(--background-repeat);
+  background-size: var(--background-size);
+  color: var(--primary-text-color);
+  transition: var(--transition);
+}
+
+.mainContainer {
+  font-family: var(--font-family);
+  background: var(--main-container-background);
+  border-radius: var(--main-container-border-radius);
+  box-shadow: var(--main-container-box-shadow);
+  backdrop-filter: var(--main-container-backdrop-filter);
+  -webkit-backdrop-filter: var(--main-container-backdrop-filter);
+  border: var(--main-container-border);
+  text-align: var(--main-container-text-align);
+  height: var(--main-container-height);
+  width: var(--main-container-width);
+  display: var(--display);
+  flex-direction: var(--main-container-flex-direction);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  color: var(--primary-text-color);
+  position: var(--select-position);
+  bottom: var(--main-container-bottom);
+  left: var(--main-container-left);
+}
+
+#myVideo {
+  display: var(--background-video-display);
+  position: var(--background-video-position);
+  width: var(--background-video-width);
+  height: var(--background-video-width);
+  object-fit: var(--background-object-fit);
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: var(--cursor-pointer);
+  background: var(--background-transparent);
+  border: var(--button-border-none);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+}
+
+#stopWatchDisplay {
+  font-family: var(--font-family);
+  width: var(--stop-watch-display-width);
+  text-align: var(--main-container-text-align);
+  font-size: var(--stop-watch-font-size);
+}
+
+.btnContainer {
+  font-family: var(--font-family);
+  display: var(--display);
+  flex-direction: var(--btn-container-flex-direction);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  gap: var(--btn-container-gap);
+}
+
+select {
+  font-family: var(--font-family);
+  position: var(--select-position);
+  top: var(--select-top);
+  right: var(--select-right);
+  left: var(--select-left);
+  cursor: var(--cursor-pointer);
+  background: var(--background-transparent);
+  font-size: var(--select-font-size);
+  font-weight: var(--select-font-weight);
+  width: var(--select-width);
+  border: var(--select-border);
+  border-radius: var(--select-border-radius);
+  box-shadow: var(--select-box-shadow);
+  padding: var(--select-padding);
+  appearance: var(--select-appearance);
+  background-image: var(--select-arrow);
+  background-repeat: var(--select-background-repeat);
+  background-position: var(--select-background-position);
+  background-size: var(--select-background-size);
+  color: var(--primary-text-color);
+  color: var(--select-color-transparent);
+  z-index: var(--select-z-index);
+  background: var(--select-background-blue-greenish);
+}
+
+option {
+  font-family: var(--font-family);
+  color: var(--secondary-text-color);
+}
+
+#heading {
+  z-index: var(--select-z-index);
+  position: var(--heading-position);
+  top: var(--heading-top);
+  font-size: var(--heading-size);
+}

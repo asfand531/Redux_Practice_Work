@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Asimovian&family=Caveat+Brush&family=Michroma&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Michroma", sans-serif;
+  cursor: default;
+}
+
+:root {
+  --box-shadow: 5px 10px 35px 5px;
+  --text-color: aliceblue;
+}
+
+.container {
+  background: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  gap: 15px;
+  color: var(--text-color);
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 30px;
+  width: max-content;
+  box-shadow: var(--box-shadow);
+}
+
+input {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+}
+
+#toast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(60, 60, 60, 0.95);
+  width: 320px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--text-color);
+
+  opacity: 0;
+  transform: scale(0.8) translateY(-20px);
+  pointer-events: none;
+}
+
+#toast.show {
+  animation: toastIn 0.3s forwards;
+}
+
+#toast.hide {
+  animation: toastOut 0.3s forwards;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+  }
+}
+
+@keyframes toastOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+    pointer-events: none;
+  }
+}
+
+#close_errormsg_icon,
+.close_errormsg_icon {
+  cursor: pointer;
+}
