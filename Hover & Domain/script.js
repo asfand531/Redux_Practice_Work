@@ -1,4 +1,3 @@
-// Task # 1
 const getEmailValue = document.getElementById("email");
 const getDomainValue = document.getElementById("domain");
 const getEmailNameValue = document.getElementById("email_name");
