@@ -62,18 +62,3 @@ function setClear() {
   getEmailNameValue.value = "";
   buttonDisabled();
 }
-
-// Task # 2
-function onPointerEnter() {
-  const getNameInput = document.getElementById("name");
-  getNameInput.style.backgroundColor = "gray";
-  getNameInput.style.color = "white";
-  getNameInput.style.border = "3px solid black";
-}
-
-function onPointerLeave() {
-  const getNameInput = document.getElementById("name");
-  getNameInput.style.backgroundColor = "white";
-  getNameInput.style.color = "black";
-  getNameInput.style.border = "1px solid black";
-}
